@@ -1,0 +1,69 @@
+import math 
+
+
+
+class Spheres:
+
+    
+
+    def __init__(self,radius,mass):
+
+        self.radius = radius
+
+        self.mass = mass
+
+    
+
+    def surfaceArea(self):
+
+        r=self.radius
+
+        self.area = 4 * math.pi * (r*r) 
+
+        return (self.area)
+
+
+
+    def volume(self):
+
+        r=self.radius
+
+        self.volumeResult = (4/3) * math.pi * (r*r*r)
+
+        return self.volumeResult
+
+    
+
+    def density(self):
+
+        r = self.radius
+
+        self.density = self.mass / (4/3) * math.pi * (r*r*r)
+
+        return self.density
+
+
+
+red = Spheres(1.7, .25)        
+
+print(red.volume())
+
+print(red.surfaceArea())
+
+print(red.density())    
+
+
+
+# Question #2
+
+    
+
+x = [[0, 1, 2, 3], [4, 5, 6, 7],
+
+    [8, 9, 10, 11], [12, 13, 14, 15]]
+
+
+
+for nums in x:
+
+    print(*nums, sep = ' & ')              
